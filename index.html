@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">شرکت علم و صنعت و معدن آوادان</title>
+  <meta name="description" data-i18n="meta.description" content="شرکت آوادان با 25 سال سابقه در طراحی سازه، معماری و تاسیسات مکانیکی و برقی">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Google Fonts - Vazirmatn for Persian -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <link rel="stylesheet" href="logo-filip.css">
+  <style>
+    [dir="rtl"] { font-family: 'Vazirmatn', sans-serif; }
+    [dir="ltr"] { font-family: 'Arial', sans-serif; }
+    .gradient-bg {
+      background: linear-gradient(135deg, #40e0d0 0%, #008B8B 100%);
+    }
+    .ai-gradient {
+      background: linear-gradient(135deg, #40e0d0, #008B8B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+  
+  <!-- Header / Navigation -->
+  <header class="fixed w-full z-50 gradient-bg shadow-lg">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center gap-4">
+          <div class="logo-container">
+            <div class="logo-flip">
+              <div class="logo-front">
+                <img src="img/logo1.jpg" class="logo" alt="AVADAN.CO">
+                <div class="logo-text"></div>
+              </div>
+              <div class="logo-back">
+                <img src="img/m1.jpg" class="logo" alt="AVADAN.CO">
+                <div class="logo-text"></div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:block text-white">
+            <p class="text-sm uppercase tracking-widest text-cyan-100">ENGINEERING & INDUSTRY</p>
+            <p class="text-lg md:text-xl font-bold" data-i18n="header.companyName">آوادان</p>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-6 text-white">
+          <a href="#home" class="hover:text-cyan-100 transition" data-i18n="nav.home">خانه</a>
+          <a href="#about" class="hover:text-cyan-100 transition" data-i18n="nav.about">درباره ما</a>
+          <div class="relative group">
+            <a href="#services" class="hover:text-cyan-100 transition flex items-center gap-1" data-i18n="nav.services">خدمات <i class="fas fa-chevron-down text-xs"></i></a>
+            <ul class="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <li><a href="#services" class="block px-4 py-2 text-gray-800 hover:bg-cyan-50" data-i18n="nav.services.structure">طراحی سازه</a></li>
+              <li><a href="#services" class="block px-4 py-2 text-gray-800 hover:bg-cyan-50" data-i18n="nav.services.architecture">طراحی معماری</a></li>
+              <li><a href="#services" class="block px-4 py-2 text-gray-800 hover:bg-cyan-50" data-i18n="nav.services.technical">نقشه‌کشی فنی</a></li>
+            </ul>
+          </div>
+          <div class="relative group">
+            <a href="#projects" class="hover:text-cyan-100 transition flex items-center gap-1" data-i18n="nav.projects">پروژه‌ها <i class="fas fa-chevron-down text-xs"></i></a>
+            <ul class="absolute top-full right-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <li><a href="#projects" class="block px-4 py-2 text-gray-800 hover:bg-cyan-50" data-i18n="nav.projects.completed">پروژه‌های انجام شده</a></li>
+              <li><a href="#projects" class="block px-4 py-2 text-gray-800 hover:bg-cyan-50" data-i18n="nav.projects.ongoing">پروژه‌های در حال انجام</a></li>
+            </ul>
+          </div>
+          <div class="relative group">
+            <a href="#education" class="hover:text-cyan-100 transition flex items-center gap-1" data-i18n="nav.education">آموزش <i class="fas fa-chevron-down text-xs"></i></a>
+            <ul class="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <li><a href="#education" class="block px-4 py-2 text-gray-800 hover:bg-cyan-50" data-i18n="nav.education.structure">طراحی سازه</a></li>
+              <li><a href="#education" class="block px-4 py-2 text-gray-800 hover:bg-cyan-50" data-i18n="nav.education.architecture">طراحی معماری</a></li>
+              <li><a href="#education" class="block px-4 py-2 text-gray-800 hover:bg-cyan-50" data-i18n="nav.education.technical">نقشه‌کشی فنی</a></li>
+            </ul>
+          </div>
+          <a href="form.html" class="hover:text-cyan-100 transition" data-i18n="nav.contact">تماس با ما</a>
+          
+          <!-- Language Switcher -->
+          <div class="flex items-center bg-blue-600 hover:bg-red-600 border border-white/30 rounded-full text-sm overflow-hidden">
+            <button type="button" class="px-4 py-2 text-white hover:bg-white/30 transition lang-switch-btn" data-lang="fa">
+              <span data-i18n-lang="fa">فارسی</span>
+            </button>
+            <button type="button" class="px-4 py-2 text-white/70 hover:bg-white/30 transition lang-switch-btn" data-lang="tr">
+              <span data-i18n-lang="tr">Türkçe</span>
+            </button>
+          </div>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-white/20">
+        <div class="flex flex-col gap-3 pt-4">
+          <a href="#home" class="text-white hover:text-cyan-100 transition" data-i18n="nav.home">خانه</a>
+          <a href="#about" class="text-white hover:text-cyan-100 transition" data-i18n="nav.about">درباره ما</a>
+          <a href="#services" class="text-white hover:text-cyan-100 transition" data-i18n="nav.services">خدمات</a>
+          <a href="#projects" class="text-white hover:text-cyan-100 transition" data-i18n="nav.projects">پروژه‌ها</a>
+          <a href="#education" class="text-white hover:text-cyan-100 transition" data-i18n="nav.education">آموزش</a>
+          <a href="form.html" class="text-white hover:text-cyan-100 transition" data-i18n="nav.contact">تماس با ما</a>
+          <div class="flex gap-2 pt-2 border-t border-white/20">
+            <button type="button" class="flex-1 bg-white/20 text-white py-2 rounded-lg lang-switch-btn" data-lang="fa">
+              <span data-i18n-lang="fa">فارسی</span>
+            </button>
+            <button type="button" class="flex-1 bg-white/20 text-white py-2 rounded-lg lang-switch-btn" data-lang="tr">
+              <span data-i18n-lang="tr">Türkçe</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20 px-4">
+      <div class="container mx-auto max-w-6xl text-center">
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 animate__animated animate__fadeInDown" data-i18n="hero.title">
+            شرکت علم و صنعت و معدن آوادان
+          </h1>
+          <p class="text-xl md:text-2xl mb-4 text-cyan-100 animate__animated animate__fadeInUp" data-i18n="hero.subtitle1">
+            با 25 سال سابقه در طراحی سازه و معماری و تاسیسات مکانیکی و برقی
+          </p>
+          <p class="text-lg md:text-xl mb-8 text-cyan-50 animate__animated animate__fadeInUp" data-i18n="hero.subtitle2">
+            طراحی با نرم‌افزارهای روز و راهکارهای مدرن مبتنی بر هوش مصنوعی
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+            <a href="#projects" class="bg-white text-cyan-600 hover:bg-cyan-50 font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:scale-105" data-i18n="hero.cta1">
+              مشاهده پروژه‌ها
+            </a>
+            <a href="form.html" class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-8 rounded-lg backdrop-blur-sm transition" data-i18n="hero.cta2">
+              درخواست مشاوره
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-i18n="about.title">درباره ما</h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-teal-600 mx-auto rounded-full"></div>
+        </div>
+        <div class="max-w-4xl mx-auto bg-gradient-to-br from-cyan-50 to-teal-50 p-8 rounded-2xl border border-cyan-100">
+          <p class="text-lg text-gray-700 leading-relaxed mb-6" data-i18n="about.description">
+            شرکت علم و صنعت و معدن آوادان با بیش از 25 سال تجربه در زمینه طراحی سازه، معماری و تاسیسات مکانیکی و برقی، 
+            یکی از پیشروان صنعت ساخت و ساز در ایران است. ما با استفاده از آخرین تکنولوژی‌ها و نرم‌افزارهای روز دنیا، 
+            راهکارهای مدرن مبتنی بر هوش مصنوعی را در پروژه‌های خود به کار می‌گیریم.
+          </p>
+          <div class="grid md:grid-cols-3 gap-6 mt-8">
+            <div class="text-center p-4 bg-white rounded-xl">
+              <div class="text-4xl font-bold text-cyan-600 mb-2">25+</div>
+              <p class="text-gray-600" data-i18n="about.stats.years">سال تجربه</p>
+            </div>
+            <div class="text-center p-4 bg-white rounded-xl">
+              <div class="text-4xl font-bold text-cyan-600 mb-2">500+</div>
+              <p class="text-gray-600" data-i18n="about.stats.projects">پروژه انجام شده</p>
+            </div>
+            <div class="text-center p-4 bg-white rounded-xl">
+              <div class="text-4xl font-bold text-cyan-600 mb-2">98%</div>
+              <p class="text-gray-600" data-i18n="about.stats.satisfaction">رضایت مشتری</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-i18n="services.title">خدمات ما</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="services.subtitle">
+            ارائه خدمات تخصصی در زمینه طراحی و ساخت
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl mb-4">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="services.structure.title">طراحی سازه</h3>
+            <p class="text-gray-600" data-i18n="services.structure.desc">طراحی سازه‌های بتنی و فولادی با استفاده از نرم‌افزارهای پیشرفته</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl mb-4">
+              <i class="fas fa-drafting-compass"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="services.architecture.title">طراحی معماری</h3>
+            <p class="text-gray-600" data-i18n="services.architecture.desc">طراحی معماری و دکوراسیون داخلی و نما</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl mb-4">
+              <i class="fas fa-industry"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="services.industrial.title">طراحی واحدهای صنعتی</h3>
+            <p class="text-gray-600" data-i18n="services.industrial.desc">طراحی واحدهای صنعتی و معدنی با استانداردهای بین‌المللی</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl mb-4">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="services.surveying.title">نقشه‌برداری</h3>
+            <p class="text-gray-600" data-i18n="services.surveying.desc">نقشه‌برداری با دوربین‌های لیزری و GPS با دقت میلیمتر</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl mb-4">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="services.steel.title">مدل‌سازی اسکلت فولادی</h3>
+            <p class="text-gray-600" data-i18n="services.steel.desc">مدل‌سازی دقیق اتصالات فولادی با نرم‌افزارهای تخصصی</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl mb-4">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="services.education.title">آموزش</h3>
+            <p class="text-gray-600" data-i18n="services.education.desc">برگزاری دوره‌های آموزشی تخصصی</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-i18n="projects.title">پروژه‌های ما</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="projects.subtitle">
+            نمونه‌ای از پروژه‌های موفق انجام شده
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project Card 1 -->
+          
+            
+              <div class="card-front">
+                <img src="img/sr3.jpg" alt="پروژه صنعتی" class="w-full h-48 object-cover">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="projects.industrial.title">طراحی واحدهای صنعتی و معدنی</h3>
+                  <p class="text-gray-600 mb-4" data-i18n="projects.industrial.desc">مشاوره، طراحی و نظارت پروژه‌های صنعتی و معدنی</p>
+                  <a href="form.html" class="inline-block bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition" data-i18n="projects.cta">درخواست مشاوره</a>
+                </div>
+              </div>
+              <div class="card-back">
+                <img src="img/mihan1.jpg" alt="پروژه صنعتی" class="w-full h-48 object-cover">
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="projects.industrial.title">طراحی واحدهای صنعتی و معدنی</h3>
+                  <p class="text-gray-600 mb-4" data-i18n="projects.industrial.desc2">طراحی کامل، مشاوره و نظارت بر پروژه‌های صنعتی و معدنی</p>
+                  <a href="form.html" class="inline-block bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition" data-i18n="projects.cta">درخواست مشاوره</a>
+                </div>
+              </div>
+            
+          
+
+          <!-- Project Card 2 -->
+          <div class="project-card bg-white rounded-2xl shadow-md overflow-hidden">
+            <img src="img/mihan2.jpg" alt="واحد تولید روی" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="projects.zinc.title">طراحی واحد تولید روی</h3>
+              <p class="text-gray-600 mb-4" data-i18n="projects.zinc.desc">طراحی کامل واحد تولید روی و خردایش خاک معدنی</p>
+              <a href="form.html" class="inline-block bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition" data-i18n="projects.cta">درخواست مشاوره</a>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card bg-white rounded-2xl shadow-md overflow-hidden">
+            <img src="img/saz1.jpg" alt="واحد مسکونی" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="projects.residential.title">واحد مسکونی</h3>
+              <p class="text-gray-600 mb-4" data-i18n="projects.residential.desc">طراحی 1200 واحد مسکونی با اسکلت بتنی و فولادی</p>
+              <a href="form.html" class="inline-block bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition" data-i18n="projects.cta">درخواست مشاوره</a>
+            </div>
+          </div>
+
+          <!-- Project Card 4 -->
+          <div class="project-card bg-white rounded-2xl shadow-md overflow-hidden">
+            <img src="img/rmm.jpg" alt="کارخانه کنسانتره" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="projects.concentrate.title">کارخانه تولید کنسانتره سرب و روی</h3>
+              <p class="text-gray-600 mb-4" data-i18n="projects.concentrate.desc">طراحی کامل واحد فلوتاسیون و تغلیظ خاک معدنی</p>
+              <a href="form.html" class="inline-block bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition" data-i18n="projects.cta">درخواست مشاوره</a>
+            </div>
+          </div>
+
+          <!-- Project Card 5 -->
+          <div class="project-card bg-white rounded-2xl shadow-md overflow-hidden">
+            <img src="img/sol.gif" alt="سوله صنعتی" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="projects.shed.title">طراحی سوله‌های صنعتی</h3>
+              <p class="text-gray-600 mb-4" data-i18n="projects.shed.desc">طراحی انواع سوله‌های صنعتی</p>
+              <a href="form.html" class="inline-block bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition" data-i18n="projects.cta">درخواست مشاوره</a>
+            </div>
+          </div>
+
+          <!-- Project Card 6 -->
+          <div class="project-card bg-white rounded-2xl shadow-md overflow-hidden">
+            <img src="img/zn.gif" alt="پتروشیمی" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="projects.petro.title">واحد تولید اوره و آمونیاک</h3>
+              <p class="text-gray-600 mb-4" data-i18n="projects.petro.desc">مشارکت در طراحی و نظارت واحد تولید اوره و آمونیاک</p>
+              <a href="form.html" class="inline-block bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition" data-i18n="projects.cta">درخواست مشاوره</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-i18n="education.title">آموزش</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="education.subtitle">
+            دوره‌های آموزشی تخصصی برای مهندسان و معماران
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-2xl shadow-md">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl mb-4">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="education.structure.title"> طراحی سازه های پیچیده و خاص </h3>
+            <p class="text-gray-600" data-i18n="education.structure.desc"> آموزش طراحی سازه‌های پیچیده و خاص صنعتی و مسکونی بتنی و فولادی با نرم افزار های تخصصی</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-md">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl mb-4">
+              <i class="fas fa-drafting-compass"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="education.architecture.title">طراحی معماری</h3>
+            <p class="text-gray-600" data-i18n="education.architecture.desc">آموزش طراحی معماری و دکوراسیون</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-md">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl mb-4">
+              <i class="fas fa-ruler"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="education.technical.title">نقشه برداری</h3>
+            <p class="text-gray-600" data-i18n="education.technical.desc"> آموزش  نقشه برداری با دوربین های لیزری و گیرنده های GPS  مولتی فرکانس </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-10">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+        <div class="flex items-center gap-4 mb-4 md:mb-0">
+          <div class="bg-gradient-to-r from-cyan-500 to-teal-600 w-16 h-16 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold">AVADAN</span>
+          </div>
+          <div>
+            <p class="text-white text-lg font-bold" data-i18n="footer.companyName">آوادان</p>
+            <p class="text-sm" data-i18n="footer.tagline">دفتر فنی مهندسی آوادان</p>
+          </div>
+        </div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-linkedin-in text-2xl"></i></a>
+          <a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-telegram-plane text-2xl"></i></a>
+          <a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-instagram text-2xl"></i></a>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6">
+        <p data-i18n="footer.copyright">&copy; 2025 شرکت علم و صنعت و معدن آوادان. کلیه حقوق محفوظ است.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot (will be added with multilingual support) -->
+  <div id="chatbot-wrapper" class="fixed bottom-6 right-6 z-50 hidden">
+    <!-- Chatbot content will be added via JavaScript -->
+  </div>
+  <button id="chatbot-toggle" class="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 text-white rounded-full shadow-lg hover:shadow-xl transition transform hover:scale-110 z-50 flex items-center justify-center text-2xl">
+    <i class="fas fa-comments"></i>
+  </button>
+
+  <!-- Translation System -->
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

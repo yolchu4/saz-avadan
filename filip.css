@@ -1,0 +1,73 @@
+.project-cardf {
+  width: 260px;
+  /*height: 440px;*/
+  perspective: 1000px; /* برای ایجاد عمق سه‌بعدی */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.project-cardf:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-front img, .card-back img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-front {
+  background: #fff;
+  text-align: center;
+}
+
+.card-front h3 {
+  color: #004f7c;
+  margin: 15px 10px;
+}
+
+.card-back {
+  background: #fff;
+  text-align: center;
+  transform: rotateY(180deg);
+  padding: 10px;
+}
+
+.card-back p {
+  font-size: 0.9rem;
+  color: #333;
+  text-align: justify;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.card-back a {
+  display: inline-block;
+  background-color: #0099cc;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.card-back a:hover {
+  background-color: #0077aa;
+}

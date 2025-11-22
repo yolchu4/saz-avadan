@@ -1,0 +1,150 @@
+:root {
+  --main-color: #40e0d0;
+  --dark-color: #004d40;
+  --light-bg: #e0f7f5;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  margin: 0;
+  background-color: var(--light-bg);
+  color: #222;
+}
+
+header {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  position:center;
+  z-index:1000;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  padding:center;
+  position:center;
+}
+
+.menu li {
+  position: sticky ;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: var(--dark-color);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: white;
+  color: var(--dark-color);
+  border-radius: 6px;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  padding: 8px 15px;
+  color: var(--dark-color);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.hero {
+  background: url('structure-bg.jpg') center/cover no-repeat;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.project-card:hover {
+    background: linear-gradient(180deg, #20B2AA, #008B8B); /* رنگ فیروزه‌ای آبی */
+    transform: translate(-10%, -10%) scale(1.1); /* دو برابر شدن اندازه */
+    z-index: 10;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  text-align:center;
+  overflow: hidden;
+  width: 250px;
+}
+
+.project-card img {
+  width: 100%;
+}
+
+.project-card h3 {
+  margin: 10px;
+}
+
+.project-card a {
+  display: block;
+  background: var(--main-color);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+}
+
+footer {
+  background: var(--dark-color);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: var(--main-color);
+  }
+  .menu.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}

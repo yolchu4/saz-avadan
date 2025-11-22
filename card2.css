@@ -1,0 +1,44 @@
+.card {
+  position: sticky;
+  top: 100px;
+  margin: 15px auto;
+  max-width: 850px;
+  
+  /* طراحی شیشه‌ای پیشرفته */
+  background: linear-gradient(
+    135deg,
+    rgba(64, 224, 208, 0.15),
+    rgba(32, 178, 170, 0.1)
+  );
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  
+  border-radius: 18px;
+  padding: 25px 30px;
+  text-align: center;
+  color: #002b2b;
+  font-family: "Vazir", sans-serif;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  z-index: 500;
+}
+
+@media (max-width: 768px) {
+  .card {
+    /* افکت شیشه‌ای قوی‌تر در موبایل */
+    background: linear-gradient(
+      135deg,
+      rgba(64, 224, 208, 0.12),
+      rgba(32, 178, 170, 0.08)
+    );
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+    
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+}

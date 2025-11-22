@@ -1,0 +1,125 @@
+
+
+.card p {
+    font-family: "Vazir", "B Nazanin", "Iranian Sans", sans-serif;
+    line-height: 1.6;
+}
+
+
+
+
+
+.card {
+  position: relative;     /* 👈 کارت هنگام اسکرول به منو می‌چسبد */
+  top: 120px;            /* فاصله از بالای صفحه (تقریباً ارتفاع منو) */
+  margin: 15px auto;
+  max-width: 850px;
+  background: linear-gradient(135deg, rgba(64, 224, 208, 0.3), rgba(0, 139, 139, 0.2));
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 22px;
+  padding: 25px 30px;
+  text-align: center;
+  color: #002b2b;
+  font-family: "Vazir", sans-serif;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  z-index: 500;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.4), transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.card1 {
+  position: sticky;     /* 👈 کارت هنگام اسکرول به منو می‌چسبد */
+  top: 100px;  /* فاصله از بالای صفحه (تقریباً ارتفاع منو) */
+  left: 50px;
+  margin: 15px auto;
+  max-width: 250px;
+  background: linear-gradient(180deg, #40E0D0, #20B2AA);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  border-radius: 18px;
+  padding: 25px 30px;
+  text-align: center;
+  color: #002b2b;
+  font-family: "Vazir", sans-serif;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  z-index: 500;
+}
+
+/* افکت هنگام hover روی کارت */
+.card:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, rgba(64, 224, 208, 0.45), rgba(0, 139, 139, 0.3));
+  box-shadow: 0 30px 65px rgba(0,0,0,0.35);
+  color: #fff;
+}
+
+/* ظرف کلی برای قرارگیری دو کارت در یک ردیف */
+.card-con1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  /* هم‌تراز از بالا */
+  gap: 25px;                /* فاصله بین دو کارت */
+  position: fixed;
+  top: 120px;               /* هم‌ارتفاع با کارت قبلی */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 600;
+}
+
+/* کارت مربع شامل لوگو */
+.logo-card {
+     position: relative;     /* 👈 کارت هنگام اسکرول به منو می‌چسبد */
+  top: 100px;            /* فاصله از بالای صفحه (تقریباً ارتفاع منو) */
+  left:100px;
+  margin: 15px auto;
+  max-width: 100px;
+  background: linear-gradient(180deg, #40E0D0, #20B2AA);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  border-radius: 18px;
+  padding: 25px 30px;
+  text-align: center;
+  color: #002b2b;
+  font-family: "Vazir", sans-serif;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  z-index: 500;
+}
+
+.logo-card img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+/* افکت hover */
+.logo-card:hover {
+  transform: scale(1.1);
+  background: linear-gradient(180deg, #20B2AA, #008B8B);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.35);
+}
+/* افکت محو شدن */
+.fade-out {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* افکت ظاهر شدن دوباره */
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease, transform 1s ease;
+}
