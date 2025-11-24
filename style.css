@@ -148,3 +148,55 @@ footer {
     display: block;
   }
 }
+
+@keyframes rotateLogo {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.logos {
+  position: fixed;
+  top: 20px; /* یا top: 20px برای گوشه بالا */
+  left: 20px;  /* یا left: 20px برای گوشه چپ */
+  width: 80px;  /* اندازه دلخواه لوگو */
+  animation: rotateLogo 6s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.5)) brightness(1.2);
+  z-index: 9999;
+}
+
+
+@keyframes rotateLogo {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.logo-mobile {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  animation: rotateLogo 6s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.5)) brightness(1.2);
+  z-index: 9999;
+}
+
+/* فقط در موبایل نمایش داده شود */
+@media (max-width: 768px) {
+  .logo-mobile  #mobile {
+    display: block;
+  }
+}
+
+
+
+@keyframes flipLogo {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+.logo-flip {
+  animation: flipLogo 4s linear infinite;
+  width: 100px;
+  transform-style: preserve-3d;
+}

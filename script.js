@@ -1,6 +1,10 @@
 // Main JavaScript for AVADAN website
 
 // Chatbot functionality with multilingual support
+
+const chatbotWelcome = translator.translations[translator.currentLang]['chatbot_welcome'];
+// استفاده از این متغیر به جای متن ثابت
+
 const chatbotKnowledgeBase = {
   fa: {
     'سلام': 'سلام! خوش آمدید. چطور می‌تونم کمکتون کنم؟',

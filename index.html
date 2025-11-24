@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   
   <link rel="stylesheet" href="logo-filip.css">
+  <link rel="stylesheet" href="style.css">
   <style>
     [dir="rtl"] { font-family: 'Vazirmatn', sans-serif; }
     [dir="ltr"] { font-family: 'Arial', sans-serif; }
@@ -52,13 +53,13 @@
           <div class="logo-container">
             <div class="logo-flip">
               <div class="logo-front">
-                <img src="img/logo1.jpg" class="logo" alt="AVADAN.CO">
+                <img src="img/logos.png" class="logo"  id="mobile"  alt="AVADAN.CO">
                 <div class="logo-text"></div>
               </div>
-              <div class="logo-back">
+              <!--div class="logo-back">
                 <img src="img/m1.jpg" class="logo" alt="AVADAN.CO">
                 <div class="logo-text"></div>
-              </div>
+              </div-->
             </div>
           </div>
           <div class="hidden md:block text-white">
@@ -66,6 +67,9 @@
             <p class="text-lg md:text-xl font-bold" data-i18n="header.companyName">آوادان</p>
           </div>
         </div>
+
+        <!--img src="img/logos.png" class="logos" alt="logo"-->
+        <img src="img/logos.png" class="logo-flip" id="mobile" alt="logo">
 
         <!-- Desktop Menu -->
         <nav class="hidden lg:flex items-center gap-6 text-white">
@@ -99,10 +103,10 @@
           <!-- Language Switcher -->
           <div class="flex items-center bg-blue-600 hover:bg-red-600 border border-white/30 rounded-full text-sm overflow-hidden">
             <button type="button" class="px-4 py-2 text-white hover:bg-white/30 transition lang-switch-btn" data-lang="fa">
-              <span data-i18n-lang="fa">فارسی</span>
+              <span data-lang="fa">فارسی</span>
             </button>
             <button type="button" class="px-4 py-2 text-white/70 hover:bg-white/30 transition lang-switch-btn" data-lang="tr">
-              <span data-i18n-lang="tr">Türkçe</span>
+              <span data-lang="tr">Türkçe</span>
             </button>
           </div>
         </nav>
@@ -457,6 +461,7 @@
   </button>
 
   <!-- Translation System -->
+   <script src="js/i18n.js"></script>
   <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
